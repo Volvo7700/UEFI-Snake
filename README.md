@@ -5,5 +5,7 @@ UEFI firmware based Snake game (WIP!)
 * EDK2
 * LLVM
 * NASM
+* QEMU
+* OVMF
 
 Absolutely WIP. Currently no actual game yet, only video mode selector
