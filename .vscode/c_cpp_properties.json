@@ -1,0 +1,29 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "EDK2",
+      "intelliSenseMode": "windows-clang-x64",
+      "compilerPath": "C:/LLVM/bin/clang.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+
+      "includePath": [
+        "${workspaceFolder}",
+        "C:/EDK/EDK2/MdePkg/Include",
+        "C:/EDK/EDK2/MdePkg/Include/Uefi",
+        "C:/EDK/EDK2/MdePkg/Include/X64",
+        "C:/EDK/EDK2/MdePkg/Include/Library",
+        "C:/EDK/UEFI-Snake",
+        "C:/EDK/UEFI-Snake/Library"
+      ],
+
+      "defines": [
+        "_MSC_VER",
+        "__GNUC__=4",
+        "__GNUC_MINOR__=2",
+        "__GNUC_PATCHLEVEL__=1"
+      ]
+    }
+  ]
+}

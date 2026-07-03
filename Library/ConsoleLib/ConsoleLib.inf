@@ -1,0 +1,25 @@
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = ConsoleLib
+  FILE_GUID                      = 983d76cb-224f-4a00-9812-ad503990ad8c
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = ConsoleLib
+
+[Sources]
+  ConsoleLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  UEFI-Snake/UEFI-Snake.dec
+
+[LibraryClasses]
+  BaseLib
+  PrintLib  
+  UefiLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+
+[Protocols]
+
+[BuildOptions]

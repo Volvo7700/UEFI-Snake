@@ -1,0 +1,86 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MyUefiProject",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "copy_efi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_efi-Debug-be58266eda6c8832c213.json",
+					"name" : "copy_efi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run-Debug-bf3b03ecf6b85a83b1b9.json",
+					"name" : "run",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_anchor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_anchor-Debug-485d7430fbdabb5bb755.json",
+					"name" : "run_anchor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uefi_build::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uefi_build-Debug-7324c2787144a641844e.json",
+					"name" : "uefi_build",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Roman/Programmieren/C/UEFI-Test/out/build/windows-default",
+		"source" : "C:/Users/Roman/Programmieren/C/UEFI-Test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

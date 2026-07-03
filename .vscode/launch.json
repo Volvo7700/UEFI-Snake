@@ -1,0 +1,37 @@
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "name": "UEFI (Build + Run)",
+//       "type": "cppvsdbg",
+//       "request": "launch",
+//       "preLaunchTask": "uefi_all",
+//       "program": "qemu-system-x86_64",
+//       "args": [
+//         "-machine", "q35",
+//         "-m", "512",
+//         "-drive", "if=pflash,format=raw,readonly=on,file=C:\\Program Files\\qemu\\ovmf\\OVMF_CODE_4M.fd",
+//         "-drive", "if=pflash,format=raw,file=C:\\Program Files\\qemu\\ovmf\\OVMF_VARS_4M.fd",
+//         "-drive", "format=raw,file=fat:rw:ESP",
+//         "-serial", "vc", // für Ausgabe im Terminal
+//         "-net", "none"
+//       ],
+//       "console": "newExternalWindow"
+//     }
+//   ]
+// }
+
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "name": "UEFI (Build + Run)",
+//       "type": "cppvsdbg",
+//       "request": "launch",
+//       "preLaunchTask": "uefi_all",
+//       "program": "C:\\Windows\\System32\\cmd.exe",
+//       "args": [],
+//       "console": "newExternalWindow" // integratedTerminal für Ausgabe im Terminal
+//     }
+//   ]
+// }

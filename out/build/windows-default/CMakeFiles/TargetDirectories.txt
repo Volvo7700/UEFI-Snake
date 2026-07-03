@@ -1,0 +1,6 @@
+C:/Users/Roman/Programmieren/C/UEFI-Test/out/build/windows-default/CMakeFiles/run_anchor.dir
+C:/Users/Roman/Programmieren/C/UEFI-Test/out/build/windows-default/CMakeFiles/uefi_build.dir
+C:/Users/Roman/Programmieren/C/UEFI-Test/out/build/windows-default/CMakeFiles/rebuild_cache.dir
+C:/Users/Roman/Programmieren/C/UEFI-Test/out/build/windows-default/CMakeFiles/copy_efi.dir
+C:/Users/Roman/Programmieren/C/UEFI-Test/out/build/windows-default/CMakeFiles/run.dir
+C:/Users/Roman/Programmieren/C/UEFI-Test/out/build/windows-default/CMakeFiles/edit_cache.dir

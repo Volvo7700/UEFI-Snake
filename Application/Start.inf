@@ -1,0 +1,29 @@
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = Start
+  FILE_GUID                      = 68aef8a0-f6dd-4acf-9a8d-ea34ee663fd0
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  Start.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  UEFI-Snake/UEFI-Snake.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  ConsoleLib
+
+[Protocols]
+
+[Guids]
+
+[Ppis]
+
+[Depex]
+  TRUE

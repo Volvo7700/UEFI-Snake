@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "uefi_build",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "call edksetup.bat && build -p UEFI-Snake/UEFI-Snake.dsc -a X64 -t CLANGPDB"
+      ],
+      "options": {
+        "cwd": "C:/EDK2"
+      }
+    },
+    {
+      "label": "copy_efi",
+      "type": "shell",
+      "dependsOn": "uefi_build",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "New-Item -ItemType Directory -Force ESP/EFI/BOOT | Out-Null; Copy-Item edk2/Build/UEFI-Snake/DEBUG_CLANGPDB/X64/Hello.efi ESP/EFI/BOOT/BOOTX64.EFI -Force"
+      ]
+    },
+    {
+      "label": "run_qemu",
+      "type": "shell",
+      "dependsOn": "copy_efi",
+      "command": "qemu-system-x86_64",
+      "args": [
+        "-machine",
+        "q35",
+        "-m",
+        "512",
+        "-drive",
+        "if=pflash,format=raw,readonly=on,file=OVMF_CODE.fd",
+        "-drive",
+        "if=pflash,format=raw,file=OVMF_VARS.fd",
+        "-drive",
+        "format=raw,file=fat:rw:ESP",
+        "-serial",
+        "stdio",
+        "-net",
+        "none"
+      ]
+    },
+    {
+      "label": "uefi_all",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "uefi_build",
+        "copy_efi",
+        "run_qemu"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
