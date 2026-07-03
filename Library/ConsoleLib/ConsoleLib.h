@@ -49,4 +49,7 @@ BOOLEAN GetCursorVisible(void);
 void Sleep(UINTN DurationMS);
 BOOLEAN ReadLine(OUT CHAR16 *String, UINTN Length);
 void PrintColored(UINTN Arguments, CHAR16 *String, ...);
+void PrintColoredClean(UINTN Arguments, CHAR16 *String, ...);
 void PrintAligned(UINTN Arguments, UINTN Width, UINTN Alignment, CHAR16 *String, ...);
+void PrintError(CHAR16 *String);
+void PrintMultistringAnim(UINTN Arguments, UINTN StartX, UINTN StartY, UINTN Delay, UINTN Length, CHAR16* Multistring[]);

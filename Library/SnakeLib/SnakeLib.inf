@@ -1,13 +1,13 @@
 [Defines]
   INF_VERSION                    = 0x00010017
-  BASE_NAME                      = Snake
+  BASE_NAME                      = SnakeLib
   FILE_GUID                      = f282a522-e6f4-407b-8a36-b89d3a74bbfc
   MODULE_TYPE                    = BASE
   VERSION_STRING                 = 1.0
-  LIBRARY_CLASS                  = UefiMain
+  LIBRARY_CLASS                  = SnakeLib
 
 [Sources]
-  Snake.c
+  SnakeLib.c
 
 [Packages]
   MdePkg/MdePkg.dec

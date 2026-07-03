@@ -118,6 +118,19 @@ void PrintColored(UINTN Attribute, CHAR16 *String, ...)
     CHAR16 Buffer[256];
     VA_LIST Args;
 
+    VA_START(Args, String);
+    PrintInternal(String, Args, Buffer, sizeof(CHAR16) * 256);
+    VA_END(Args);
+
+    SetColor(Attribute);
+    Print(L"%s", Buffer);
+}
+
+void PrintColoredClean(UINTN Attribute, CHAR16 *String, ...)
+{
+    CHAR16 Buffer[256];
+    VA_LIST Args;
+
     
     //Print(L"\n\n\nPrintColored(): StrLen(Buffer): %u\n", StrLen(Buffer));
     //Print(L"PrintColored(): StrLen(String): %u\n", StrLen(String));
@@ -132,6 +145,7 @@ void PrintColored(UINTN Attribute, CHAR16 *String, ...)
     Print(L"%s", Buffer);   
     SetColor(OldColor);
 }
+
 
 void PrintAligned(UINTN Attribute, UINTN Width, UINTN Alignment, CHAR16 *String, ...)
 {
@@ -191,5 +205,21 @@ void PrintAligned(UINTN Attribute, UINTN Width, UINTN Alignment, CHAR16 *String,
                 Print(L" ");
             }
         }
+    }
+}
+
+void PrintError(CHAR16 *String)
+{
+    PrintColoredClean(EFI_BACKGROUND_RED | EFI_WHITE, String);
+}
+
+void PrintMultistringAnim(UINTN Arguments, UINTN StartX, UINTN StartY, UINTN Delay, UINTN Length, CHAR16 *Multistring[])
+{
+    SetColor(Arguments);
+    for (UINTN i = 0; i < Length; i++)
+    {
+        SetCursorPosition(StartX, StartY + i);
+        Print(L"%s", Multistring[i]);
+        Sleep(Delay);
     }
 }

@@ -1,6 +1,7 @@
 #include <Uefi.h>
 
 #include <Library/ConsoleLib/ConsoleLib.h>
+#include <Library/SnakeLib/SnakeLib.h>
 #include <Library/UefiLib.h>
 #include <Library/UefiApplicationEntryPoint.h>
 #include <Library/UefiBootServicesTableLib.h>
@@ -87,7 +88,9 @@ EFI_STATUS EFIAPI UefiMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *Syste
     
     PrintColored(EFI_BACKGROUND_BLUE | EFI_WHITE, L"\nWork in Progress... First \"Concept\"\n");
 
-    TextModeSelector();
+
+    SnakeInit();
+    //TextModeSelector();
 
     Sleep(2000);
     

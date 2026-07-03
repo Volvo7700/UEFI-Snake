@@ -18,6 +18,7 @@
   UefiApplicationEntryPoint
   UefiBootServicesTableLib
   ConsoleLib
+  SnakeLib
 
 [Protocols]
 

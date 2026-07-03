@@ -27,7 +27,7 @@
   DevicePathLib               |MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
   UefiRuntimeServicesTableLib |MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.inf
   ConsoleLib                  |UEFI-Snake/Library/ConsoleLib/ConsoleLib.inf
+  SnakeLib                    |UEFI-Snake/Library/SnakeLib/SnakeLib.inf
 
 [Components]
   UEFI-Snake/Application/Start.inf
-  UEFI-Snake/Application/Snake.inf
